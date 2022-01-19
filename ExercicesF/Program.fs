@@ -92,12 +92,12 @@ let remplacerEntraineur(equipe: equipes, entraineur: entraîneurs): equipes=equi
 let memeEquipe(equipe1: equipes, equipe2: equipes): bool=
        equipe1 = equipe2
 
-let entraineurPacer = creerEntraineur  nom: "Larry Bird" ancienJoueur: true
-val statPacer = creerStats victoire: 58; defaite: 24
-let equipePacer = creerEquipe nom: "Indiana Pacers";  entraineur: entraineurPacer stat: statPacer
+let entraineurPacer = creerEntraineur ("Larry Bird", true)
+let statPacer = creerStats (58, 24)
+let equipePacer = creerEquipe ("Indiana Pacers", entraineurPacer, statPacer)
 
-let entraineurLakers = creerEntraineur  nom: "Del Harris";  ancienJoueur: false
-let statLakers = creerStats victoire: 61; defaite: 21
-let equipeLakers = creerEquipe  nom: "LA Lakers";  entraineur: entraineurLakeres; stat: statLakers
+let entraineurLakers = creerEntraineur  ("Del Harris", false)
+let statLakers = creerStats (61, 21)
+let equipeLakers = creerEquipe  ("LA Lakers", entraineurLakers, statLakers)
 
-val memeEquipe equipePacer: equipes; equipeLakers |> printfn  memeEquipe
+memeEquipe (equipePacer, equipeLakers) |> printfn "%b"
