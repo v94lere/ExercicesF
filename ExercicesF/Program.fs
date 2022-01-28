@@ -1,4 +1,7 @@
-﻿
+open system
+
+/// Exercices calcul
+ 
 let five = 5
 let seven = 7
 let cube (x : int) = x * x * x
@@ -59,7 +62,7 @@ let reformat (txt: string): string =
 
 reformat("[INFO] : Opération terminée") |> printfn("%s")
 
-/// B. Manipuler les caractères
+/// Manipuler les caractères
 let talkToBob(message: string): string =
     match message with
     | i when (i.EndsWith("?")) -> "Bien sûr";
@@ -70,7 +73,7 @@ let talkToBob(message: string): string =
 printfn "Bob: %s" (talkToBob("COMMENT ÇA VA ?")); // -> renvoi Bien sûr car le pattern est avant le isUpper
 
 
-///Exercice 3
+///Exercice Basket-ball
 type entraîneurs = {
  nom: string
  ancienJoueur: bool
