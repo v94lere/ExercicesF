@@ -20,7 +20,7 @@ let interestRate (balance: decimal): single =
 
 interestRate (200.75m) |> printfn "%f"
 
-///Exercice 2
+///Exercice Chaine de caractères
 
 let interest (balance: decimal): decimal =
  System.Convert.ToDecimal (interestRate (200.75m)) * balance / 100m
