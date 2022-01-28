@@ -59,6 +59,17 @@ let reformat (txt: string): string =
 
 reformat("[INFO] : Opération terminée") |> printfn("%s")
 
+/// B. Manipuler les caractères
+let talkToBob(message: string): string =
+    match message with
+    | i when (i.EndsWith("?")) -> "Bien sûr";
+    | i when (i = i.ToUpper()) -> "Whoa, calme-toi !";
+    | i when (i = i.ToUpper() && i.EndsWith("?")) -> "Calme-toi, je sais ce que je fais";
+    | i when (i.Length = 0) -> "Très bien. Sois comme ça";
+    | _ -> "Peu importe";
+printfn "Bob: %s" (talkToBob("COMMENT ÇA VA ?")); // -> renvoi Bien sûr car le pattern est avant le isUpper
+
+
 ///Exercice 3
 type entraîneurs = {
  nom: string
