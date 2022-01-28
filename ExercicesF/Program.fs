@@ -1,3 +1,4 @@
+/// Exercices réaliser sous F# 
 open system
 
 /// Exercices calcul
